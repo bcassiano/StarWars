@@ -81,7 +81,7 @@
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemRedColor"/>
                         <constraints>
                             <constraint firstItem="l7K-4l-kkN" firstAttribute="top" secondItem="wTl-Ib-1Io" secondAttribute="bottom" constant="30" id="4FQ-eN-GiG"/>
                             <constraint firstItem="wTl-Ib-1Io" firstAttribute="top" secondItem="0n6-ec-8Ei" secondAttribute="bottom" constant="8" symbolic="YES" id="AUt-QI-h7S"/>
@@ -206,6 +206,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="m09-X7-qcE"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="YMO-vN-CVg">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -226,6 +227,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
