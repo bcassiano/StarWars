@@ -99,14 +99,14 @@
                     <connections>
                         <outlet property="txtLogin" destination="Qzb-pR-KSs" id="pYX-HM-vV4"/>
                         <outlet property="txtPassword" destination="wTl-Ib-1Io" id="dLA-x2-vPp"/>
-                        <segue destination="X3L-4M-Wve" kind="show" identifier="tela2" id="5xe-c2-SeU"/>
+                        <segue destination="OqE-XE-gMp" kind="show" identifier="tela2" id="5xe-c2-SeU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-159" y="-29"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Filmes-->
         <scene sceneID="yBl-JN-yZ8">
             <objects>
                 <tableViewController id="X3L-4M-Wve" customClass="TableViewController" customModule="AppListaFilmes" customModuleProvider="target" sceneMemberID="viewController">
@@ -138,14 +138,89 @@
                             <outlet property="delegate" destination="X3L-4M-Wve" id="7XY-aw-DkU"/>
                         </connections>
                     </tableView>
+                    <tabBarItem key="tabBarItem" title="Filmes" image="list.bullet.rectangle" catalog="system" id="bOi-0N-fQ1"/>
                     <navigationItem key="navigationItem" id="zTp-NG-hxN"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mzH-9i-Kx4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="522" y="-29"/>
+            <point key="canvasLocation" x="1226" y="-29"/>
+        </scene>
+        <!--Favorite Collection View Controller-->
+        <scene sceneID="E6t-QA-tml">
+            <objects>
+                <collectionViewController id="k4I-TM-Wsm" customClass="FavoriteCollectionViewController" customModule="AppListaFilmes" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="TLs-TC-p3S">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="skT-EC-3Ks">
+                            <size key="itemSize" width="166" height="216"/>
+                            <size key="estimatedItemSize" width="166" height="216"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cellFavorite" id="IjL-PK-hTg" customClass="CollectionViewCell" customModule="AppListaFilmes" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="166" height="216"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="166" height="216"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kUU-D0-5hy">
+                                            <rect key="frame" x="17" y="8" width="129" height="147"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NJh-Q2-DYg">
+                                            <rect key="frame" x="9" y="153" width="147" height="53"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </view>
+                                <size key="customSize" width="166" height="216"/>
+                                <connections>
+                                    <outlet property="imageViewFavorite" destination="kUU-D0-5hy" id="Ahg-Kr-Uj4"/>
+                                    <outlet property="lblTituloFavorite" destination="NJh-Q2-DYg" id="bq0-ZV-rQo"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="k4I-TM-Wsm" id="RRh-c4-Igc"/>
+                            <outlet property="delegate" destination="k4I-TM-Wsm" id="InM-NC-5US"/>
+                        </connections>
+                    </collectionView>
+                    <tabBarItem key="tabBarItem" systemItem="favorites" id="fgc-y8-Uxg"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XHN-vb-KjZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1908.6956521739132" y="-19.565217391304348"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="ZFy-Gg-3PL">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="OqE-XE-gMp" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="m09-X7-qcE"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="YMO-vN-CVg">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="X3L-4M-Wve" kind="relationship" relationship="viewControllers" id="F8y-R0-Jn9"/>
+                        <segue destination="k4I-TM-Wsm" kind="relationship" relationship="viewControllers" id="4HS-R6-rQb"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E2W-x5-K6C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="521.73913043478262" y="-29.347826086956523"/>
         </scene>
     </scenes>
     <resources>
+        <image name="list.bullet.rectangle" catalog="system" width="128" height="93"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
